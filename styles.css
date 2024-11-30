@@ -27,11 +27,25 @@
     background-color: #30011E; /* Blue */
 }
 
+/* Header Styles */
+h1 {
+    position: absolute;
+    top: 50px; 
+    left: 60px;
+    font-size: 2em;
+    font-weight: bold; 
+    color: #EF6F6C;
+}
+
 #about {
     background-color: #30011E; /* Green */
 }
 
 #projects {
+    background-color: #30011E; /* Red */
+}
+
+#experience {
     background-color: #30011E; /* Red */
 }
 
@@ -64,13 +78,4 @@ body {
     color: #f4e374;
 }
 
-/* Header Styles */
-h1 {
-    position: absolute;
-    top: 50px; 
-    left: 60px;
-    font-size: 2em;
-    font-weight: bold; 
-    color: #EF6F6C;
-}
 
