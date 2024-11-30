@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Nick Henderson's Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="hero">
-        <nav>
-            <div class="logo">
-                <h1>Nick Henderson</h1>
-            </div>
-            <ul>
-                <li><a href="#">Home </a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Experiences</a></li>
-                <li><a href="#">Contact Me</a></li>
-            </ul>
-        </nav>
-    </div>
+  <!-- Navigation Buttons -->
+  <div id="navigation">
+    <button onclick="navigateTo('home')">Home</button>
+    <button onclick="navigateTo('about')">About</button>
+    <button onclick="navigateTo('projects')">Projects</button>
+  </div>
 
-    
+  <!-- Tab Container -->
+  <div id="container">
+    <div class="tab" id="home">
+      <h1>Nick Henderson</h1>
+    </div>
+    <div class="tab" id="about">
+      <p>This is the About tab content.</p>
+    </div>
+    <div class="tab" id="projects">
+      <p>Here is where my projects will be displayed.</p>
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById('container');
+
+    function navigateTo(tabId) {
+      const tabs = Array.from(document.querySelectorAll('.tab'));
+      const index = tabs.findIndex(tab => tab.id === tabId);
+      container.style.transform = `translateX(-${index * 100}vw)`;
+    }
+  </script>
 </body>
 </html>

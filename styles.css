@@ -1,48 +1,76 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
 
-.hero{
-    position: relative;
-    width: 100%;
+/* Swipe Transition Section */
+#container {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 300vw; /* 100vw per tab; adjust for more sections */
     height: 100vh;
-    background: #2e2e2f;
 }
 
+/* Tab Styles */
+.tab {
+    min-width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #f4e374;
+}
+
+#home {
+    background-color: #30011E; /* Blue */
+}
+
+#about {
+    background-color: #30011E; /* Green */
+}
+
+#projects {
+    background-color: #30011E; /* Red */
+}
+
+body {
+    overflow: hidden; /* Disables all scrolling */
+}
+
+/* Button Navigation */
+#navigation {
+    position: fixed;
+    top: 75px; /* Adjust distance from the top */
+    right: 100px; /* Align to the right */
+    display: flex; /* Makes buttons appear in a horizontal row */
+    gap: 20px; /* Adds spacing between buttons */
+    margin: 0;
+    padding: 0;
+    z-index: 100; /* Ensure it's above other content */
+}
+
+#navigation button {
+    all: unset; /* Resets all default button styles */
+    font-size: 2rem;
+    color: #EF6F6C; /* Set the text color */
+    cursor: pointer;
+    text-align: center;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+#navigation button:hover {
+    color: #f4e374;
+}
+
+/* Header Styles */
 h1 {
     position: absolute;
-    top: 20px; 
-    left: 20px;
-    font-size: 3em;
+    top: 50px; 
+    left: 60px;
+    font-size: 2em;
     font-weight: bold; 
-    color: #f9f9f9af;
-}
-
-nav{
-    display: flex;
-    width: 84%;
-    margin: auto;
-    padding: 20px 0;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-    padding: 10px 0;
-}
-
-nav ul li a{
-    text-decoration: none;
-    color: #f9f9f9af;
-    font-weight: bold;
-}
-
-nav ul li a:hover{
-    color: #ffffff
+    color: #EF6F6C;
 }
 
