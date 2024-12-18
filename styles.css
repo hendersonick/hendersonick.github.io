@@ -65,10 +65,10 @@ body {
 /* Button Navigation */
 #navigation {
     position: fixed;
-    top: 30px; /* Adjust distance from the top */
-    right: 30px; /* Align to the right */
+    top: 5%; /* Adjust distance from the top */
+    right: 10%; /* Align to the right */
     display: flex; /* Makes buttons appear in a horizontal row */
-    gap: 20px; /* Adds spacing between buttons */
+    gap: 4%; /* Adds spacing between buttons */
     margin: 0;
     padding: 0;
     z-index: 100; /* Ensure it's above other content */
@@ -76,7 +76,7 @@ body {
 
 #navigation button {
     all: unset; /* Resets all default button styles */
-    font-size: 2rem;
+    font-size: 2.25rem;
     color: #EF6F6C; /* Set the text color */
     cursor: pointer;
     text-align: center;
