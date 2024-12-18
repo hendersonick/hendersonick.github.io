@@ -1,7 +1,12 @@
+/* universal stlying*/
 * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+}
+
+#active-tab-display {
+    display: none; /* Hide by default */
 }
 
 /* Swipe Transition Section */
@@ -23,29 +28,33 @@
     color: #f4e374;
 }
 
-#home {
+#Home {
     background-color: #30011E; /* Blue */
 }
 
 /* Header Styles */
 h1 {
     position: absolute;
-    top: 50px; 
-    left: 60px;
+    top: 1.5%; 
+    left: 1%;
     font-size: 2em;
     font-weight: bold; 
     color: #EF6F6C;
 }
 
-#about {
+#About {
     background-color: #30011E; /* Green */
 }
 
-#projects {
+#Projects {
     background-color: #30011E; /* Red */
 }
 
-#experience {
+#Experience {
+    background-color: #30011E; /* Red */
+}
+
+#Chat {
     background-color: #30011E; /* Red */
 }
 
@@ -56,8 +65,8 @@ body {
 /* Button Navigation */
 #navigation {
     position: fixed;
-    top: 75px; /* Adjust distance from the top */
-    right: 100px; /* Align to the right */
+    top: 30px; /* Adjust distance from the top */
+    right: 30px; /* Align to the right */
     display: flex; /* Makes buttons appear in a horizontal row */
     gap: 20px; /* Adds spacing between buttons */
     margin: 0;
@@ -76,6 +85,44 @@ body {
 
 #navigation button:hover {
     color: #f4e374;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    #container {
+        display: flex;
+        transition: transform 1s ease-in-out;
+        width: 100vw; /* Make the container width fit within the viewport */
+        height: 100vh; /* Ensure the container takes up the full viewport height */
+        overflow: hidden;
+        position: relative;
+    }
+
+    .tab {
+        font-size: .75rem;  /* Smaller tab content font size */
+    }
+
+    /* Hide the navigation buttons */
+    #navigation {
+        display: none; /* Hide the navigation container */
+    }
+
+    #navigation button{
+        display: none; /* Hide the navigation container */
+    }
+
+    #active-tab-display {
+        display: flex;
+        position: fixed;
+        font-weight: bold; 
+        font-size: 1.5rem;
+        top: 1.5%; /* Adjust distance from the top */
+        right: 2%; /* Align to the right */
+        color: #EF6F6C;
+        margin: 0;
+        padding: 0;
+        z-index: 100; /* Ensure it's above other content */
+      }
 }
 
 
