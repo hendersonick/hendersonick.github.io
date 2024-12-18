@@ -6,42 +6,54 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <div id="active-tab-display"></div>
+
   <!-- Navigation Buttons -->
   <div id="navigation">
-    <button onclick="navigateTo('home')">Home</button>
-    <button onclick="navigateTo('about')">About</button>
-    <button onclick="navigateTo('projects')">Projects</button>
-    <button onclick="navigateTo('experience')">Experience</button>
+    <button onclick="navigateTo('Home')">Home</button>
+    <button onclick="navigateTo('About')">About</button>
+    <button onclick="navigateTo('Projects')">Projects</button>
+    <button onclick="navigateTo('Experience')">Experience</button>
+    <button onclick="navigateTo('Chat')">Chat</button>
   </div>
 
   <!-- Tab Container -->
   <div id="container">
-    <div class="tab" id="home">
+    <div class="tab" id="Home">
       <h1>Nick Henderson</h1>
       <!-- I am nick and i am a recent graduate of universotu of maryland cs and a software engineer at t rowe price -->
     </div>
-    <div class="tab" id="about">
+    <div class="tab" id="About">
       <p>This is the About tab content.</p>
       <!-- I enjoy reading, learning, meditation, exercise, msuic, etc. I also love to travel and here is a link to my travel blog. -->
     </div>
-    <div class="tab" id="projects">
+    <div class="tab" id="Projects">
       <p>Here is where my projects will be displayed.</p>
       <!-- I have worked on two differtn reserach projects. one in barca and one at UMD -->
     </div>
-    <div class="tab" id="experience">
+    <div class="tab" id="Experience">
         <p>Here is where my work experiences will be displayed.</p>
         <!-- interclypse t rowe intern and t rowe full timer -->
       </div>
+    <div class="tab" id="Chat">
+      <p>Here is where the LLM trained on my data will go.</p>
+      <!-- I have worked on two differtn reserach projects. one in barca and one at UMD -->
+    </div>
   </div>
 
   <script>
     const container = document.getElementById('container');
+    const activeTabDisplay = document.getElementById('active-tab-display');
 
     function navigateTo(tabId) {
       const tabs = Array.from(document.querySelectorAll('.tab'));
       const index = tabs.findIndex(tab => tab.id === tabId);
       container.style.transform = `translateX(-${index * 100}vw)`;
+      // Update the active tab display content
+      activeTabDisplay.textContent = `${tabId}`;
     }
+    navigateTo('Home');
   </script>
 </body>
 </html>
